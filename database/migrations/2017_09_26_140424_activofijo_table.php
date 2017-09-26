@@ -18,6 +18,7 @@ class ActivofijoTable extends Migration
             $table->string('nombre');
             $table->integer('cantidad');
             $table->decimal('costo',9,2);
+            $table->integer('categoriaid')->unsigned();
             $table->foreign('categoriaid')->references('id')->on('categoriaactivo');
             $table->integer('metodoid')->unsigned();
             $table->foreign('metodoid')->references('id')->on('metododeprec');
